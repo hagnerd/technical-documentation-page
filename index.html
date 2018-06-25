@@ -17,47 +17,201 @@
   <main id="main-doc">
     <nav id="navbar">
       <!--  header should be topic of the technical doc -->
-      <a href="" class="nav-link"></a>
-      <a href="" class="nav-link"></a>
-      <a href="" class="nav-link"></a>
-      <a href="" class="nav-link"></a>
-      <a href="" class="nav-link"></a>
+      <header>JS Documentation</header>
+      <a href="#introduction-section" class="nav-link">Introduction</a>
+      <a href="#why-section" class="nav-link">Why Learn JavaScript?</a>
+      <a href="#variables-section" class="nav-link">Variables</a>
+      <a href="#datastructre-section" class="nav-link">Data Structures</a>
+      <a href="#functions-section" class="nav-link">Functions</a>
+      <a href="#modern-es-section" class="nav-link">Modern EcmaScript</a>
     </nav>
     <div>
-      <section class="main-section">
-        <header></header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <li></li>
+      <section class="main-section" id="introduction-section">
+        <header>Introduction</header>
+        <p>JavaScript was created in 1995 by Brendan Eich. For the first half of its life, JavaScript was mainly used to add
+          interactivity to web page, and was disparaged as a programming language. In modern times however, it is extremely
+          widespread, and even entirely possible to write JavaScript for use on servers, natively on your computer, and is
+          even used in production for smart phone applications.</p>
+        <p>JavaScript is an interpreted language (which means that it is turned into machine-readable code at run-time instead
+          of being compiled ahead of time). It is still mainly used on the web, however, JavaScript has evolved far beyond
+          front-end, and just sprinkling into webpages for interactivity.</p>
+        <p>In the following documentation we will go over why JavaScript is a great language to learn, some of the basic syntax,
+          and how to move forward with your learning if you decide to go down the JavaScript route.</p>
       </section>
-      <section class="main-section">
-        <header></header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <li></li>
+      <section class="main-section" id="why-section">
+        <header>Why JavaScript?</header>
+        <p>JavaScript is a great first language for people learning to program. Many people will argue that it has pitfalls
+          (it does), that it can form bad habits (it can), and that there are a lot of high-level abstractions within the
+          language that allow people to take important things for granted (it does).</p>
+        <h2>So why learn JavaScript? Especially as a first language?</h2>
+        <ul>
+          <li>There is a huge community who can help you when you get stuck</li>
+          <li>The syntax is extremely close to many other languages (which makes it easier to learn other languages later)</li>
+          <li>It is extremely flexible to many different programming paradigms</li>
+          <li>It runs everywhere!</li>
+          <li>You can start applying skills instantly</li>
+        </ul>
+
+        <p>If the sound of that interests you, move on to the next section to start learning some of the basics. These docs
+          are not exhaustive, and will give you only a taste of some of the basic language features</p>
       </section>
-      <section class="main-section">
-        <header></header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <li></li>
+      <section class="main-section" id="variables-section">
+        <header>Variables</header>
+        <p>If you have gone through math, you should be familiar with a variable.</p>
+        <p>A variable is a symbol that represents a value.</p>
+        <p>This value can be known, or unknown, and can change or be constant. The name variable can make it hard for people
+          to grasp how something can be constant. To explain this, let's think about pi. Pi is a symbol that represents a
+          number. The number 3.14... doesn't change. It is constant. But it is represented with the variable symbol pi.</p>
+        <p>There are a few things we can do with variables in JavaScript:</p>
+        <ul>
+          <li>Declare them</li>
+          <li>Assign a value to them</li>
+          <li>Change their value (as long as the variable is not a constant)</li>
+          <li>Use their value</li>
+        </ul>
+
+        <h2>Declaring Variables</h2>
+        <p>There are three keywords you can use to declare a variable in JavaScript:</p>
+        <ul>
+          <li>var</li>
+          <li>let</li>
+          <li>const</li>
+        </ul>
+
+        <p>"var" is the traditional way of declaring a variable. For many years it was the only way. However, it carries with
+          it some baggage that can make your code run in unexpected ways. You should recognize it in code used by others,
+          but avoid using it while writing your own until you learn the intracacies that come along with using it, and then
+          you should only use it when you have a good reason to.</p>
+        <p>The value of a "var" variable can be changed, so it is not a constant</p>
+        <p>"let" is similar to "var", in that it is not constant, and can be reassigned. However, let is a more modern way to
+          declare variables, and avoids the pitfalls that "var" has. If you are making a variable whose value will need to
+          change then you should use let.</p>
+        <p>"const" is...you guessed it... a constant! This can be hard to wrap your head around. Why would you want a value
+          to stay the same? There are obvious examples like pi, or the answer to the universe (42). But instead think of
+          constants as a slice of time. The value can be different every time a program runs, or later when we learn about
+          functions, and be changed by the input given to a function. The formula for calulating the circumference of a circle
+          is 2πr. The formula is constant, but value of r (radius) changes based on the circle. The rule of thumb is that
+          you should always use const unless you need to reassign the value, and then you should use let.</p>
+
+        <p>Declaring variables with all three types looks like: </p>
+        <code>var favoriteFood;</code>
+        <code>let favoriteColor;</code>
+        <code>const favoritePerson;</code>
+        <p>Note on declaring const. You would actually want to declare a const with a value, because otherwise it will be assigned
+          the value of undefined, and you won't be allowed to change it because, well, it's constant!</p>
+
+        <h2>Assigning Values to Variables</h2>
+        <p>JavaScript is cool because anything can be assigned to a variable. Strings, numbers, arrays, objects, and even functions.
+          Assigning a value to a variables is easy! You can even declare a variable, with a value all in one line.</p>
+        <code>let favoriteFood = "pizza";</code>
+        <code>const favoriteNumber = 42;</code>
+        <h2>Changing an assigned value</h2>
+        <p>If you declared a variable with let, then you can reassign a variable like:</p>
+        <code>let favoriteFood = "pizza";
+        favoriteFood = "hamburgers";
+        </code>
+        <h2>Using a variable's value</h2>
+        <p>Using a variable's value is as easy as using it's name.</p>
+        <code>let number = 10;
+          let otherNumber = 20;
+          let otherOtherNumber = number + otherNumber
+        </code>
+        <p>Can you guess what otherOtherNumber's value is? (I'll give you a hint, it's number plus otherNumber)... you're right.
+          It's 30.</p>
       </section>
-      <section class="main-section">
-        <header></header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <li></li>
+      <section class="main-section" id="datastructure-section">
+        <header>Data Structures</header>
+        <p>I don't want to get bogged down in the details, but in JavaScript, there are two basic datastructures:</p>
+        <ul>
+          <li>Arrays</li>
+          <li>Objects</li>
+        </ul>
+
+        <h2>Arrays</h2>
+        <p>An array is an indexed list of things. It can be pretty much anything. Strings, numbers, objects, booleans, even
+          other arrays. Being indexed just means that it is ordered, and you can access elements in the array with the item's
+          index.
+        </p>
+        <p>The only caveat is that the index starts at 0. This is a computer science thing, and arrays (not always called arrays
+          in other languages) almost always start at 0.</p>
+        <p>An array looks like:</p>
+        <code>let exampleArray = [ "cool", 2, true ];</code>
+        <p>To access an element within an array you use what is called "bracket notation". You use the variable name of the
+          array, followed by a pair of brackets, and inside those brackets, you put the index number of the item you would
+          like. For example to get the value 2, out of exampleArray:</p>
+        <code>let num2 = exampleArray[1]</code>
+        <h2>Objects</h2>
+        <p>Objects are a structure with key value pairs. A key is like a variable, and a value can be anything, an array, string,
+          number, another object, a function (a function inside of an object or on an object is called a method in JavaScript).
+          You use curly braces "{" and "}" to define an object literal. You call these key value pairs "properties".</p>
+        <code>
+            let obj = {
+              favoriteNumber: 42,
+              favoriteColor: 'red',
+              cool: true,
+            }
+        </code>
+        <p>To access elements from an object you can use either the dot notation, or bracket notation. If you know the property
+          you are accessing use dot notation.</p>
+        <p>Dot notation</p>
+        <code>obj.favoriteNumber // => 42</code>
+        <p>Bracket notation</p>
+        <code>obj['favoriteColor'] // => 'red'</code>
+        <code>
+          let keyIWant = 'cool'
+          obj[keyIwant] // => true</code>
       </section>
-      <section class="main-section">
-        <header></header>
-        <p></p>
-        <p></p>
-        <code></code>
-        <li></li>
+      <section class="main-section" id="functions-section">
+        <header>Functions</header>
+        <p>Functions are a fundamental part of any programming language. Once again, there is a lot of small details to bogged
+          down by with functions in JavaScript, so we are just goint to stick to the basics. There is much more to learn
+          about functions that what is contained in this small little doc.</p>
+        <p>A function is an algorithm that you define for the computer to run. I'm sorry, that's a terrible definition, but
+          it will be easier to understand than it sounds. I will present some opinions on functions that I think makes programming,
+          and learning to program much easier. Not everyone shares these same opinions.</p>
+        <p>Let's show an example of a simple function definition, and disect it's parts</p>
+        <code> 
+          function helloWorld (greeting, name) {
+            return greeting + " " + name;
+          }
+        </code>
+        <p>First: the function keyword. You declare a function by using the word function, followed by the name you want to
+          give the function. We chose helloWorld. </p>
+        <p>Second the words greeting, and name inside of the parenthesis... those are called parameters. Think of them as variables
+          that are place holders for values you are going to give the function later. They are specific to the function.
+          Opinion: you should only use values that are explicity passed into a function (what this really means is do not
+          rely on global data).</p>
+        <p>The curly braces are called the function block. This creates a local scope for the function to run in isolation.
+          Inside of the curly braces is the body of the function.</p>
+        <p>The return keyword is a reserved keyword that tells the function what value should be given as a result of the function
+          running.
+        </p>
+
+        <p>To use the function later in the program we might do something like:</p>
+        <code>helloWorld('Hey there', 'Todd') // => 'Hey there Todd'</code>
+        <p>We call the function by using its name
+          <underline>helloWorld</underline>.</p>
+        <p>We pass it arguments that correspond with the parameters it expects in the function definition. Those are 1. greeting,
+          and 2. name. It's important to note that JavaScript is not strongly typed, and we can actually pass any value for
+          either argument. There is nothing stopping us from passing 2, and false, as the arguments. This is why supersets
+          of JavaScript like TypeScript (created by Microsoft) exist. It allows us to declare the type of arguments that
+          we expect, and the type of return we expect, so that we can have been error handling before introducing bugs into
+          our code.</p>
+      </section>
+      <section class="main-section" id="modern-es-section">
+        <header>Modern EcmaScript</header>
+        <p>The JavaScript that is used today is actually more accurately called EcmaScript. It is being actively developed by
+          TC39, which is a board of representatives from technology compaines (Google, Microsoft, PayPal, and many others).</p>
+        <p>Many new features in EcmaScript take a while for browsers to implement. But the goal of TC39 is to make it easier
+          for all browsers to implement these new features in a standard way, so that JavaScript executes in the ways that
+          we expect.</p>
+        <p>To use these new features sooner, rather than later, you will have to utilize build tools. I mentioned one earlier,
+          TypeScript, but there is also Babel.</p>
+        <p>TypeScript and Babel are not necessarily direct competitors. You can infact use both together, and people do. But
+          TypeScript also gives you typesafety, and depending on the editor you use, intellisense (code completion, and definitions
+          as you're typing) and it also will transpile modern EcmaScript, down to a version of JavaScript that is compatible
+          with the minimum browser you would like to target. Babel strictly gives you the ability to transpile modern EcmaScript
+          to usable JavaScript.</p>
       </section>
 
     </div>
